@@ -1,0 +1,98 @@
+Em duplas deverá ser postado link no github contendo código fonte  em NODEJS capaz de:
+
+1) Crie uma consulta que mostre todos os carros da cor verde
+    const mysql = require('mysql2');
+
+    const connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'phpmyadmin',
+      password: 'aluno',
+      database: 'locacoes'
+    });
+
+    connection.connect();
+
+    const queryString = SELECT * FROM `CARROS` WHERE COR='VERDE';
+
+    connection.query(queryString, (error, results, fields) => {
+      if (error) throw error;
+      console.log('Resultado da consulta:');
+      console.log(results);
+    });
+
+    connection.end();
+
+2) Crie uma consulta que mostre as locações que ocorreram com o carro código 3
+
+    const mysql = require('mysql2');
+
+    const connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'phpmyadmin',
+      password: 'aluno',
+      database: 'locacoes'
+    });
+
+    connection.connect();
+
+    const queryString = SELECT * FROM `LOCAÇÕES` WHERE CODCARRO = 3';
+
+    connection.query(queryString, (error, results, fields) => {
+      if (error) throw error;
+      console.log('Resultado da consulta:');
+      console.log(results);
+    });
+
+    connection.end();
+
+3) Crie uma consulta que mostre As locações que ocorreram com os carros à Gasolina e Etanol e quem são os clientes e seus respectivos telefones
+
+    const mysql = require('mysql2');
+
+    const connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'phpmyadmin',
+      password: 'aluno',
+      database: 'locacoes'
+    });
+
+    connection.connect();
+
+    const queryString = SELECT * FROM `CARROS`, `CLIENTES`, `LOCAÇÕES` WHERE COMBUSTÍVEL = 'GASOLINA' OR COMBUSTÍVEL = 'ETANOL';
+
+    connection.query(queryString, (error, results, fields) => {
+      if (error) throw error;
+      console.log('Resultado da consulta:');
+      console.log(results);
+    });
+
+    connection.end();
+
+4) Liste os carros que ainda não foram alugados e hoje em dia estão DISPONÍVEIS
+
+    const mysql = require('mysql2');
+
+    const connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'phpmyadmin',
+      password: 'aluno',
+      database: 'locacoes'
+    });
+
+    connection.connect();
+
+    const queryString = SELECT * FROM `CARROS` WHERE ESTÁ_DISPONIVEL='SIM';
+
+    connection.query(queryString, (error, results, fields) => {
+      if (error) throw error;
+      console.log('Resultado da consulta:');
+      console.log(results);
+    });
+
+    connection.end();
+
+-----------------------------
+5) Crie uma stored Procedure para o exercício 2,3,4 e 6
+
+6) Crie uma stored Procedure para adicionar um novo cliente.
+-----------------------------
