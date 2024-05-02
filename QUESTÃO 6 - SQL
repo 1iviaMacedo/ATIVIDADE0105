@@ -1,0 +1,20 @@
+    const mysql = require('mysql2');
+
+    const connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'phpmyadmin',
+      password: 'aluno',
+      database: 'locacoes'
+    });
+
+    connection.connect();
+
+    const queryString = INSERT INTO `CLIENTES`(`CÓDIGO`, `NOME_CLIENTE`, `TELEFONE`, `SEXO`, `IDADE`) VALUES ('25','AMANDA','(19)9955-7838','F','37');
+
+    connection.query(queryString, (error, results, fields) => {
+      if (error) throw error;
+      console.log('Resultado da consulta:');
+      console.log(results);
+    });
+
+    connection.end();
