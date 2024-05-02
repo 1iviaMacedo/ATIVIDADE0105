@@ -1,8 +1,64 @@
 2.
+DELIMITER //
+
+CREATE PROCEDURE SP_ConsultarLocacoesPorCarro
+    (IN CodigoCarro INT)
+BEGIN
+    SELECT *
+    FROM locações
+    WHERE CODCARRO = CodigoCarro;
+END //
+
+DELIMITER ;
+
+
+
+
 
 3.
+DELIMITER //
+
+CREATE PROCEDURE SP_ConsultarLocacoesPorCarro
+    (IN CodigoCarro INT)
+BEGIN
+    SELECT *
+    FROM locações
+    WHERE CODCARRO = CodigoCarro;
+END //
+
+DELIMITER ;
+
+
+
+
 
 4.
+DELIMITER //
+
+CREATE PROCEDURE SP_ConsultarLocacoesPorCarro
+    (IN CodigoCarro INT)
+BEGIN
+    SELECT *
+    FROM locações
+    WHERE CODCARRO = CodigoCarro;
+END //
+
+DELIMITER ;
+
+
+
+
 
 6.
+DELIMITER //
+
+CREATE PROCEDURE SP_ConsultarLocacoesPorCarro
+    (IN CodigoCarro INT)
+BEGIN
+    SELECT *
+    FROM locações
+    WHERE CODCARRO = CodigoCarro;
+END //
+
+DELIMITER ;
 
