@@ -90,9 +90,3 @@ Em duplas deverá ser postado link no github contendo código fonte  em NODEJS c
     });
 
     connection.end();
-
------------------------------
-5) Crie uma stored Procedure para o exercício 2,3,4 e 6
-
-6) Crie uma stored Procedure para adicionar um novo cliente.
------------------------------
